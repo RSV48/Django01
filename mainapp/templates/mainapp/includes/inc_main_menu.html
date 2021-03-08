@@ -2,8 +2,8 @@
         {% if request.resolver_match.url_name == 'main' %}
                class="active"
         {% endif %}>домой</a></li>
-<li><a href="{% url  'products' %}"
-        {% if 'products' in request.resolver_match.url_name %}
+<li><a href="{% url  'products:products' %}"
+        {% if request.resolver_match.namespace == 'products'%}
                class="active"
         {% endif %}>продукты</a></li>
 <li><a href="{% url 'contact' %}"

@@ -4,25 +4,26 @@ import os
 from django.conf import settings
 from django.shortcuts import render
 
+from mainapp.models import Product, ProductCategory
+
+
 
 def main(request):
+    products = Product.objects.all()[:4]
     contante = {
         'title': 'Главная',
+        'products':products
     }
     return render(request, 'mainapp/index.html', contante)
 
 
-def products(request):
-    links_menu = [
-        {'href': 'products_all', 'name': 'все'},
-        {'href': 'products_home', 'name': 'дом'},
-        {'href': 'products_office', 'name': 'офис'},
-        {'href': 'products_modern', 'name': 'модерн'},
-        {'href': 'products_classic', 'name': 'класика'},
-    ]
+def products(request, pk=None):
+    links_menu = ProductCategory.objects.all()
+    same_products = Product.objects.all()[:3]
     contante = {
         'title': 'Продукты',
-        'links_menu': links_menu
+        'links_menu': links_menu,
+        'same_products':same_products
     }
     return render(request, 'mainapp/products.html', contante)
 
