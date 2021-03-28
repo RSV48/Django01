@@ -9,8 +9,19 @@ class Basket(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField(verbose_name='количество', default=0)
     add_datetime = models.DateTimeField(auto_now_add=True, verbose_name='время')
-    cost = models.PositiveSmallIntegerField(verbose_name='стоимость', default=0)
 
+    @property
+    def product_cost(self):
+        return self.product.price * self.quantity
 
-    # class Meta:
-    #     unique_together = ('user', 'product',)
+    @property
+    def total_quantity(self):
+        _item = Basket.objects.filter(user=self.user)
+        _total_quantity = sum(list(map(lambda x: x.quantity, _item)))
+        return _total_quantity
+
+    @property
+    def total_cost(self):
+        _item = Basket.objects.filter(user=self.user)
+        _total_cost = sum(list(map(lambda x: x.product_cost, _item)))
+        return _total_cost

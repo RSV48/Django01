@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1d18152-2802-4eb5-a5e7-98cb03921070" name="Default Changelist" comment="Task Lesson 04">
-      <change afterPath="$PROJECT_DIR$/basketapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/migrations/0002_basket_cost.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/products_list.html" afterDir="false" />
+    <list default="true" id="c1d18152-2802-4eb5-a5e7-98cb03921070" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/basketapp/migrations/0003_remove_basket_cost.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basketapp/templates/basketapp/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basketapp/templates/basketapp/basket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basketapp/templates/basketapp/includes/inc_basket_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/basket_script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_products_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_products_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/products_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/products_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -52,6 +48,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1p0QrxOHP3IK8rWj88bqyUp2arA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -178,7 +177,8 @@
       <workItem from="1615206680366" duration="10938000" />
       <workItem from="1615709472536" duration="3844000" />
       <workItem from="1615713594234" duration="16010000" />
-      <workItem from="1616320592998" duration="14354000" />
+      <workItem from="1616320592998" duration="14825000" />
+      <workItem from="1616914109219" duration="15652000" />
     </task>
     <task id="LOCAL-00001" summary="Task Lesson 01">
       <created>1614353885569</created>
@@ -236,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615792932289</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Task Lesson 05">
+      <created>1616343074083</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616343074083</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +255,8 @@
     <MESSAGE value="Task Lesson 02" />
     <MESSAGE value="Task Lesson 03" />
     <MESSAGE value="Task Lesson 04" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task Lesson 04" />
+    <MESSAGE value="Task Lesson 05" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task Lesson 05" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$manage.coverage" NAME="manage Coverage Results" MODIFIED="1616341821385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
