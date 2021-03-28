@@ -5,9 +5,11 @@ class ProductCategory(models.Model):
     name = models.CharField(verbose_name='наиментование категории', max_length=64, unique=True)
     description = models.TextField(verbose_name='описание категории', blank=True)
     create_dt = models.DateTimeField(verbose_name='дата создания категории', auto_now_add=True)
+    is_active = models.BooleanField(verbose_name='активна', default=True)
 
     def __str__(self):
         return self.name
+
 
 class Product(models.Model):
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
