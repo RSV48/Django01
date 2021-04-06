@@ -2,32 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d18152-2802-4eb5-a5e7-98cb03921070" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adminapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/category_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/category_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/includes/inc_menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/user_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/user_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/migrations/0003_productcategory_is_active.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/product_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/product_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/product_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminapp/templatetags/my_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/migrations/0004_product_is_active.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/category_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/category_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/user_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/user_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/products_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/products_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -72,16 +65,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/product_images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/adminapp/templates/adminapp" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/adminapp/templates/adminapp" />
+      <recent name="$PROJECT_DIR$/adminapp/templates/adminapp/includes" />
       <recent name="$PROJECT_DIR$/media/product_images" />
       <recent name="$PROJECT_DIR$/mainapp/templates/mainapp" />
       <recent name="$PROJECT_DIR$/geekshop/static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/adminapp/templates/adminapp" />
       <recent name="$PROJECT_DIR$/adminapp/templates/adminapp/inclides" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -183,7 +179,7 @@
       <workItem from="1615709472536" duration="3844000" />
       <workItem from="1615713594234" duration="16010000" />
       <workItem from="1616320592998" duration="14825000" />
-      <workItem from="1616914109219" duration="24976000" />
+      <workItem from="1616914109219" duration="45856000" />
     </task>
     <task id="LOCAL-00001" summary="Task Lesson 01">
       <created>1614353885569</created>
@@ -255,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616932384596</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Task Lesson 07">
+      <created>1616945349912</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616945349912</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +272,8 @@
     <MESSAGE value="Task Lesson 04" />
     <MESSAGE value="Task Lesson 05" />
     <MESSAGE value="Task Lesson 06" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task Lesson 06" />
+    <MESSAGE value="Task Lesson 07" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task Lesson 07" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$manage.coverage" NAME="manage Coverage Results" MODIFIED="1616341821385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
