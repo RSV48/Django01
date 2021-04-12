@@ -31,7 +31,6 @@ def main(request):
     contante = {
         'title': 'Главная',
         'products': products,
-        'basket': basket
     }
     return render(request, 'mainapp/index.html', contante)
 
@@ -61,7 +60,6 @@ def products(request, pk=None, page=1):
             'links_menu': links_menu,
             'category': category_item,
             'products': product_paginator,
-            'basket': basket,
 
         }
         return render(request, 'mainapp/products_list.html', content)
@@ -70,7 +68,6 @@ def products(request, pk=None, page=1):
         'links_menu': links_menu,
         'hot_product': hot_product,
         'same_products': get_same_products(hot_product),
-        'basket': basket,
     }
     return render(request, 'mainapp/products.html', content)
 
@@ -82,7 +79,6 @@ def product(request, pk):
     content = {
         'title': title,
         'links_menu': ProductCategory.objects.all(),
-        'basket': get_basket(request.user),
         'product': product,
         'same_products': get_same_products(product),
     }
@@ -97,7 +93,6 @@ def contact(request):
     contante = {
         'title': 'Контакты',
         'location_contacts': location,
-        'basket': basket
     }
     return render(request, 'mainapp/contact.html', contante)
 
