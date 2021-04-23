@@ -4,8 +4,9 @@ from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
+from django.db import transaction
 
-from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
+from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm, ShopUserProfileEditForm
 from authapp.models import ShopUser
 
 
@@ -54,18 +55,22 @@ def register(request):
     return render(request, 'authapp/register.html', content)
 
 
+@transaction.atomic
 def edit(request):
     if request.method == 'POST':
         edit_form = ShopUserEditForm(request.POST, request.FILES, instance=request.user)
-        if edit_form.is_valid():
+        profile_form = ShopUserProfileEditForm(request.POST, request.FILES, instance=request.user.shopuserprofile)
+        if edit_form.is_valid() and profile_form.is_valid():
             edit_form.save()
             return HttpResponseRedirect(reverse('auth:edit'))
     else:
         edit_form = ShopUserEditForm(instance=request.user)
+        profile_form = ShopUserProfileEditForm(instance=request.user.shopuserprofile)
 
     content = {
         'title': 'редактирование',
-        'form': edit_form
+        'form': edit_form,
+        'profile_form': profile_form
     }
     return render(request, 'authapp/edit.html', content)
 
@@ -83,8 +88,8 @@ def verify(request, email, activation_key):
     user = ShopUser.objects.get(email=email)
     if user.activation_key == activation_key and not user.is_activation_key_expired():
         user.is_active = True
-        user.activation_key =''
+        user.activation_key = ''
         user.save()
-        auth.login(request,user)
+        auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         return render(request, 'mainapp/index.html')
     return render(request, 'authapp/verification.html')

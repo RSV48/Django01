@@ -3,6 +3,7 @@
     <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_table }}
+        {{ profile_form.as_table }}
         <input type="submit" value="сохранить" class="form-control">
     </form>
     <button class="btn-default form-control">
