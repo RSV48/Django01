@@ -2,27 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d18152-2802-4eb5-a5e7-98cb03921070" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0004_alter_shopuser_age.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0005_shopuserprofile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0006_alter_shopuser_age.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geekshop/vk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geekshop/vk.sample.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/management/commands/update_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/users_avatars/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/order_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_actions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordersapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/includes/inc_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/includes/inc_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -67,18 +74,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/adminapp/templates/adminapp" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/adminapp/templates/adminapp" />
+      <recent name="$PROJECT_DIR$/ordersapp" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/geekshop" />
-      <recent name="$PROJECT_DIR$/adminapp/templates/adminapp" />
       <recent name="$PROJECT_DIR$/adminapp/templates/adminapp/includes" />
-      <recent name="$PROJECT_DIR$/media/product_images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ordersapp/templates/ordersapp" />
       <recent name="$PROJECT_DIR$/geekshop" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/adminapp/templates/adminapp" />
@@ -186,7 +194,7 @@
       <workItem from="1618147230260" duration="5764000" />
       <workItem from="1618214539238" duration="1953000" />
       <workItem from="1618228891029" duration="313000" />
-      <workItem from="1619100972338" duration="9459000" />
+      <workItem from="1619100972338" duration="33171000" />
     </task>
     <task id="LOCAL-00001" summary="Task Lesson 01">
       <created>1614353885569</created>
@@ -279,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618216661398</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Task Lesson DJ2 02">
+      <created>1619180766613</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1619180766613</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +311,8 @@
     <MESSAGE value="Task Lesson 07" />
     <MESSAGE value="Task Lesson 08" />
     <MESSAGE value="Task Lesson DJ2 01" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task Lesson DJ2 01" />
+    <MESSAGE value="Task Lesson DJ2 02" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task Lesson DJ2 02" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$manage.coverage" NAME="manage Coverage Results" MODIFIED="1616341821385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

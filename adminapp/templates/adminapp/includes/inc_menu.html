@@ -1,4 +1,4 @@
-<ul class="menu">
+<ul class="menu" style="width: 800px">
   <li>
     <a href="{% url 'main' %}">
       на сайт
@@ -21,6 +21,14 @@
       {% if category %}
         :<span>{{ category.name }}</span>
       {% endif %}
+    </a>
+  </li>
+ <li>
+    <a href="{% url 'adminapp:orders' %}"
+       class="{% if request.resolver_match.url_name == 'orders' or category.name %}
+                active
+              {% endif %}">
+      обработка заказов
     </a>
   </li>
 </ul>
