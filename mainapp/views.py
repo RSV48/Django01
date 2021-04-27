@@ -10,10 +10,10 @@ from basketapp.models import Basket
 from mainapp.models import Product, ProductCategory
 
 
-def get_basket(user):
-    if user.is_authenticated:
-        return Basket.objects.filter(user=user)
-    return []
+# def get_basket(user):
+#     if user.is_authenticated:
+#         return Basket.objects.filter(user=user)
+#     return []
 
 
 def get_hot_product():
@@ -26,7 +26,7 @@ def get_same_products(hot_product):
 
 
 def main(request):
-    basket = get_basket(request.user)
+    # basket = get_basket(request.user)
     products = Product.objects.all()[:4]
     contante = {
         'title': 'Главная',
@@ -38,7 +38,7 @@ def main(request):
 def products(request, pk=None, page=1):
     links_menu = ProductCategory.objects.all()
     title = 'продукты'
-    basket = get_basket(request.user)
+    # basket = get_basket(request.user)
     hot_product = get_hot_product()
 
     if pk is not None:
@@ -87,7 +87,7 @@ def product(request, pk):
 
 def contact(request):
     location = []
-    basket = get_basket(request.user)
+    # basket = get_basket(request.user)
     with open(os.path.join(settings.BASE_DIR, 'mainapp/templates/mainapp/contacts.json')) as read_file:
         location = json.load(read_file)
     contante = {
