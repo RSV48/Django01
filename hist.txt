@@ -1,0 +1,144 @@
+    1  ssh-keygen
+    2  cat /root/.ssh/id_rsa.pub
+    3  apt update
+    4  apt install nginx
+    5  apt install postgresql postgresql-contrib
+    6  apt install python3-venv
+    7  apt install git-core
+    8  nano /etc/postgresql/10/main/pg_hba.conf
+    9  ls
+   10  cd /etc/
+   11  ls
+   12  cd postgresql
+   13  ls
+   14  cd 12
+   15  ls
+   16  cd main
+   17  ls
+   18  nano pg_hda.conf
+   19  cd
+   20  nano /etc/postgresql/12/main/pg_hba.conf
+   21  useradd -g www-data -m django
+   22  cd /home/django/
+   23  git clone git@github.com:RSV48/Django01.git
+   24  ls
+   25  cd Django01
+   26  ls
+   27  python3 -m venv venv
+   28  source venv/bin/activate
+   29  pip3 install -r requirements.txt
+   30  pip3 install gunicorn
+   31  python3 manage.py migrate
+   32  systemctl restart postgresql
+   33  python3 manage.py migrate
+   34  psql -U postgres
+   35  python3 manage.py migrate
+   36  pip install Psycopg2
+   37  pip install wheel
+   38  pip install Psycopg2
+   39  pip install psycopg2
+   40  git clone git@github.com:RSV48/Django01.git
+   41  ls
+   42  rm -R Django01
+   43  ls
+   44  git fetch origin
+   45  pip3 install -r requirements.txt
+   46  cat requirements.txt 
+   47  git fetch origin
+   48  git remote add origin git@github.com:RSV48/Django01.git
+   49  git fetch origin
+   50  cat requirements.txt 
+   51  cd ..
+   52  rm -R Django01
+   53  git clone git@github.com:RSV48/Django01.git
+   54  cd Django01/
+   55  cat req
+   56  cat requirements.txt 
+   57  cd ..
+   58  rm -R Django01
+   59  ls
+   60  git clone git@github.com:RSV48/Django01.git
+   61  cd Django01/
+   62  ды
+   63  ls
+   64  python3 -m venv env
+   65  python3 -m venv venv
+   66  deactivate
+   67  python3 -m venv env
+   68  source env/bin/activate
+   69  pip3 install -r requirements.txt
+   70  python3 manage.py migrate
+   71  python3 manage.py fill_db
+   72  python3 manage.py fill
+   73  python3 manage.py runserver
+   74  python3 manage.py runserver 0.0.0.0:8000
+   75  chown -R django /home/django/
+   76  chmod -R 755 /home/django/Django01/
+   77  sudo nano /etc/systemd/system/gunicorn.service
+   78  sudo systemctl enable gunicorn
+   79  sudo systemctl start gunicorn
+   80  sudo systemctl status gunicorn
+   81  sudo nano /etc/nginx/sites-available/geekshop
+   82  sudo ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+   83  sudo nginx -t
+   84  sudo nano /etc/nginx/sites-available/geekshop
+   85  sudo ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+   86  sudo nginx -t
+   87  sudo systemctl restart nginx
+   88  sudo systemctl status gunicorn
+   89  ls
+   90  cd env
+   91  ls
+   92  cd bin
+   93  ls
+   94  cd..
+   95  cd ..
+   96  pip install gunicorn
+   97  sudo nginx -t
+   98  sudo systemctl restart nginx
+   99  cd env
+  100  ls
+  101  cd bin
+  102  ls
+  103  sudo systemctl status gunicorn
+  104  cd ..
+  105  sudo nano /etc/systemd/system/gunicorn.service
+  106  ls
+  107  sudo nano /etc/systemd/system/gunicorn.service
+  108  cd geekshop
+  109  ls
+  110  sudo nano /etc/systemd/system/gunicorn.service
+  111  sudo systemctl status gunicorn
+  112  cd..
+  113  cd ..
+  114  ls
+  115  cd env
+  116  ls
+  117  cd bin
+  118  ls
+  119  cd gunicorn
+  120  cat gunicorn
+  121  sudo nano /etc/systemd/system/gunicorn.service
+  122  sudo systemctl status gunicorn
+  123  systemctl daemon-reload
+  124  sudo systemctl status gunicorn
+  125  cd ..
+  126  systemctl daemon-reload
+  127  sudo systemctl status gunicorn
+  128  sudo systemctl enable gunicorn
+  129  sudo systemctl start gunicorn
+  130  sudo systemctl status gunicorn
+  131  apt install mc
+  132  mc
+  133  history
+  134  history /tmp/history.txt
+  135  cd ..
+  136  ls
+  137  history /tmp/history.txt
+  138  history /tmp/hist.txt
+  139  cd ..
+  140  ls
+  141  cd tmp
+  142  ls
+  143  history /tmp/hist.txt
+  144  history > /tmp/hist.txt
