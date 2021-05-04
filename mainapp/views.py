@@ -49,7 +49,7 @@ def products(request, pk=None, page=1):
         else:
             category_item = get_object_or_404(ProductCategory, pk=pk)
             product_list = Product.objects.filter(category=category_item, is_active=True, category__is_active=True).\
-                select_related('Category')
+                select_related()
         paginator = Paginator(product_list,2)
         try:
             product_paginator = paginator.page(page)
