@@ -27,7 +27,7 @@ def get_same_products(hot_product):
 
 def main(request):
     # basket = get_basket(request.user)
-    products = Product.objects.all()[:4]
+    products = Product.objects.filter(is_active=True, category__is_active=True).select_related('category')[:4]
     contante = {
         'title': 'Главная',
         'products': products,

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'ordersapp',
     'debug_toolbar',
     'template_profiler_panel',
+    'django_extensions',
 
 ]
 
@@ -161,13 +162,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # статика для работы на сервере
-STATIC_ROOT = os.path.join(
-    BASE_DIR,'static'
-)
-
-# STATICFILES_DIRS = (
-#     BASE_DIR / 'static',
+# STATIC_ROOT = os.path.join(
+#     BASE_DIR,'static'
 # )
+
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
 
 MEDIA_URL = '/media/'
 
