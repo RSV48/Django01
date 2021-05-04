@@ -1,8 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.db import transaction
 from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy, reverse
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 
 # Create your views here.
@@ -32,7 +34,7 @@ class OrderCreateView(CreateView):
         if self.request.POST:
             formset = OrderFormSet(self.request.POST)
         else:
-            basket_items = Basket.objects.filter(user=self.request.user)
+            basket_items = Basket.objects.filter(user=self.request.user).select_related()
             if len(basket_items):
                 OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemForm, extra=len(basket_items))
                 formset = OrderFormSet()
@@ -111,7 +113,7 @@ def order_forming_complete(request, pk):
     order = get_object_or_404(Order, pk=pk)
     order.status = Order.SENT_TO_PROCEED
 
-    basket_items = Basket.objects.filter(user=request.user)
+    basket_items = Basket.objects.filter(user=request.user).select_related()
     basket_items.delete()
 
     order.save()
@@ -121,7 +123,7 @@ def order_forming_complete(request, pk):
 
 def get_product_price(request, pk):
     if request.is_ajax():
-        product = Product.objects.filter(pk=int(pk)).first()
+        product = Product.objects.filter(pk=int(pk)).select_related().first()
         if product:
             return JsonResponse({'price':product.price})
         else:

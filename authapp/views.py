@@ -5,11 +5,12 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.db import transaction
+from django.views.decorators.csrf import csrf_exempt
 
 from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm, ShopUserProfileEditForm
 from authapp.models import ShopUser
 
-
+@csrf_exempt
 def login(request):
     login_form = ShopUserLoginForm(data=request.POST)
 

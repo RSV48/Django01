@@ -17,7 +17,7 @@ from mainapp.models import Product, ProductCategory
 
 
 def get_hot_product():
-    products = Product.objects.all()
+    products = Product.objects.all().select_related()
     return random.sample(list(products), 1)[0]
 
 
@@ -43,11 +43,13 @@ def products(request, pk=None, page=1):
 
     if pk is not None:
         if pk == 0:
-            product_list = Product.objects.filter(is_active=True, category__is_active=True).order_by('price')
+            product_list = Product.objects.filter(is_active=True, category__is_active=True).order_by('price').\
+                select_related('Category')
             category_item = {'name': 'все', 'pk': 0}
         else:
             category_item = get_object_or_404(ProductCategory, pk=pk)
-            product_list = Product.objects.filter(category=category_item, is_active=True, category__is_active=True)
+            product_list = Product.objects.filter(category=category_item, is_active=True, category__is_active=True).\
+                select_related('Category')
         paginator = Paginator(product_list,2)
         try:
             product_paginator = paginator.page(page)
