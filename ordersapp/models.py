@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 
 # Create your models here.
+from basketapp.models import Basket
 from mainapp.models import Product
 
 
@@ -62,13 +63,29 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
+    objects = OrderItemQuerySet.as_manager()
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='orderitems')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField(verbose_name='количество', default=0)
 
-    objects = OrderItemQuerySet.as_manager()
 
+    @staticmethod
+    def get_item(pk):
+        return Basket.objects.get(pk=pk)
 
     @property
     def get_product_cost(self):
         return self.quantity * self.product.price
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            self.product.quantity -= self.quantity - self.__class__.get_item(self.pk).quantity
+        else:
+            self.product.quantity -= self.quantity
+        self.product.save()
+        super(self.__class__, self).save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        self.product.quantity += self.quantity
+        self.product.save()
+        super().delete()

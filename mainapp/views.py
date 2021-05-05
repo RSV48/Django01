@@ -27,7 +27,7 @@ def get_same_products(hot_product):
 
 def main(request):
     # basket = get_basket(request.user)
-    products = Product.objects.filter(is_active=True, category__is_active=True).select_related('category')[:4]
+    products = Product.objects.filter(is_active=True, category__is_active=True).select_related()[:4]
     contante = {
         'title': 'Главная',
         'products': products,
@@ -43,13 +43,11 @@ def products(request, pk=None, page=1):
 
     if pk is not None:
         if pk == 0:
-            product_list = Product.objects.filter(is_active=True, category__is_active=True).order_by('price').\
-                select_related('Category')
+            product_list = Product.objects.filter(is_active=True, category__is_active=True).order_by('price')
             category_item = {'name': 'все', 'pk': 0}
         else:
             category_item = get_object_or_404(ProductCategory, pk=pk)
-            product_list = Product.objects.filter(category=category_item, is_active=True, category__is_active=True).\
-                select_related()
+            product_list = Product.objects.filter(category=category_item, is_active=True, category__is_active=True)
         paginator = Paginator(product_list,2)
         try:
             product_paginator = paginator.page(page)
