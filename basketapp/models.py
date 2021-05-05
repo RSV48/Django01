@@ -17,7 +17,7 @@ class BasketQuerySet(models.QuerySet):
 class Basket(models.Model):
     objects = BasketQuerySet.as_manager()
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='basket')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, db_index=True,  on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField(verbose_name='количество', default=0)
     add_datetime = models.DateTimeField(auto_now_add=True, verbose_name='время')
 

@@ -35,8 +35,8 @@ class Order(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True, verbose_name='создан')
     updated = models.DateTimeField(auto_now=True, verbose_name='изменен')
-    status = models.CharField(choices=ORDER_STATUSES, default=FORMING, verbose_name='статус', max_length=3)
-    is_active = models.BooleanField(default=True, verbose_name='статус')
+    status = models.CharField(db_index=True, choices=ORDER_STATUSES, default=FORMING, verbose_name='статус', max_length=3)
+    is_active = models.BooleanField(db_index=True, default=True, verbose_name='статус')
 
     class Meta:
         ordering = ('-created',)
@@ -64,8 +64,8 @@ class Order(models.Model):
 
 class OrderItem(models.Model):
     objects = OrderItemQuerySet.as_manager()
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='orderitems')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, db_index=True,  on_delete=models.CASCADE, related_name='orderitems')
+    product = models.ForeignKey(Product, db_index=True,  on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField(verbose_name='количество', default=0)
 
 
