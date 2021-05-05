@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d18152-2802-4eb5-a5e7-98cb03921070" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mainapp/migrations/0005_auto_20210505_0706.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/migrations/0003_auto_20210505_0706.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dz_files/geekshop_visualized.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dz_files/urls.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dz_files/Результаты тестирования.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dz_files" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -176,7 +173,7 @@
       <workItem from="1618228891029" duration="313000" />
       <workItem from="1619100972338" duration="43371000" />
       <workItem from="1620123159673" duration="207000" />
-      <workItem from="1620123373587" duration="18536000" />
+      <workItem from="1620123373587" duration="19095000" />
     </task>
     <task id="LOCAL-00001" summary="Task Lesson 01">
       <created>1614353885569</created>
@@ -367,7 +364,28 @@
       <option name="project" value="LOCAL" />
       <updated>1620194047087</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Добавлены индексы">
+      <created>1620198415987</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1620198415987</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Добавлены индексы">
+      <created>1620198549359</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1620198549359</updated>
+    </task>
+    <task id="LOCAL-00030" summary="DEBUG = True">
+      <created>1620198630876</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1620198630876</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +416,9 @@
     <MESSAGE value="select_related" />
     <MESSAGE value="Оптимизация + исправлена логика работы склада при удалении товаров из корзины или заказа" />
     <MESSAGE value="переключена БД" />
-    <option name="LAST_COMMIT_MESSAGE" value="переключена БД" />
+    <MESSAGE value="Добавлены индексы" />
+    <MESSAGE value="DEBUG = True" />
+    <option name="LAST_COMMIT_MESSAGE" value="DEBUG = True" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$manage.coverage" NAME="manage Coverage Results" MODIFIED="1616341821385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
